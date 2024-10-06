@@ -17,7 +17,6 @@
             font-family: Arial, sans-serif;
             color: white;
             background-color: #0a0a0a;
-            overflow: hidden;
         }
 
         video {
@@ -47,15 +46,13 @@
             margin: 0 auto;
             padding: 50px 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
+            flex-direction: column; /* Spaltenanordnung für mobile Geräte */
+            align-items: center; /* Zentriert die Elemente */
+            gap: 40px; /* Reduzierter Abstand zwischen den Elementen */
         }
 
         .bio {
-            flex: 1;
-            min-width: 300px;
+            width: 100%; /* Vollständige Breite */
         }
 
         .bio-section {
@@ -74,16 +71,16 @@
         }
 
         .bio-section h2 {
-            font-size: 1.5em; /* Größerer Text */
-            color: #ffbf00; /* Helle, kontrastreiche Farbe für bessere Sichtbarkeit */
-            font-weight: bold; /* Fettgedruckt */
-            text-transform: uppercase; /* Text in Großbuchstaben */
-            letter-spacing: 2px; /* Abstand zwischen den Buchstaben */
-            background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund zur besseren Lesbarkeit */
-            padding: 10px 20px; /* Polsterung um den Text */
-            border-radius: 10px; /* Abgerundete Ecken */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Schatten, um den Text hervorzuheben */
-            text-align: center; /* Text in der Mitte ausrichten */
+            font-size: 1.5em;
+            color: #ffbf00;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+            text-align: center;
         }
 
         .bio-section p {
@@ -93,7 +90,7 @@
         }
 
         .image-container {
-            flex: 1;
+            width: 80%; /* Breite für das Bild */
             perspective: 1000px;
             display: flex;
             justify-content: center;
@@ -101,7 +98,8 @@
         }
 
         .profile-image {
-            width: 80%;
+            width: 100%; /* Bild auf 100% der Containerbreite */
+            max-width: 400px; /* Maximalbreite für größere Bildschirme */
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             transform-style: preserve-3d;
@@ -153,6 +151,20 @@
             color: #ffbf00;
         }
 
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .bio-section h2 {
+                font-size: 1.2em; /* Kleinere Schriftgröße auf Mobilgeräten */
+            }
+
+            .bio-section p {
+                font-size: 1em; /* Kleinere Schriftgröße auf Mobilgeräten */
+            }
+
+            .profile-image {
+                max-width: 100%; /* Volle Breite auf Mobilgeräten */
+            }
+        }
     </style>
 </head>
 <body>
