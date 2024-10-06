@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dienstleistungen | Nader Omar</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Erfahren Sie mehr über die Dienstleistungen von Nader Omar: Webentwicklung, Backend-Lösungen und UI/UX Design.">
+    <meta name="keywords" content="Dienstleistungen, Webentwicklung, Backend, Design, UI/UX, Nader Omar">
+    <meta name="author" content="Nader Omar">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Overlay, um den Text besser lesbar zu machen */
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+
+        /* Dienstleistungen */
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 300px;
+            text-align: center;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-card h3 {
+            font-size: 2em;
+            color: #ffbf00;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 1.2em;
+            color: #dcdcdc;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Navigation */
+        .navigation {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .nav-item {
+            margin: 0 20px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-item:hover {
+            color: #ffbf00;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Hintergrundvideo -->
+    <video autoplay muted loop playsinline>
+        <source src="background.mp4" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
+
+    <!-- Overlay, um den Text hervorzuheben -->
+    <div class="overlay"></div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <a href="index.html" class="nav-item">Startseite</a>
+        <a href="projects.html" class="nav-item">Projekte</a>
+        <a href="service.html" class="nav-item">Dienstleistungen</a>
+        <a href="about.html" class="nav-item">Über mich</a>
+        <a href="contact.html" class="nav-item">Kontakt</a>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <div class="container">
+        <h1>Meine Dienstleistungen</h1>
+        <p>Ich biete maßgeschneiderte digitale Lösungen, die Ihre Anforderungen erfüllen. Sehen Sie sich an, was ich für Sie tun kann!</p>
+    </div>
+
+    <!-- Dienstleistungen -->
+    <div class="container services">
+        <div class="service-card">
+            <h3>Webentwicklung</h3>
+            <p>Erstellung moderner und responsiver Websites mit HTML, CSS, JavaScript und React. Optimierte Lösungen für eine herausragende User Experience.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Backend-Lösungen</h3>
+            <p>Skalierbare Backend-Entwicklung mit Node.js, Express und Datenbanken wie MySQL und MongoDB. Stabilität und Sicherheit für Ihr digitales Projekt.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>Kreative und benutzerfreundliche Designs, die mit Figma und Adobe XD erstellt werden. Konzentriert auf intuitive Benutzeroberflächen.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>E-Commerce Lösungen</h3>
+            <p>Individuelle Online-Shop-Entwicklung und Integration von Zahlungsdiensten, damit Ihr Geschäft wachsen kann.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Wartung und Support</h3>
+            <p>Regelmäßige Updates und technischer Support, um sicherzustellen, dass Ihre Website immer optimal funktioniert.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Nader Omar. Alle Rechte vorbehalten. <a href="contact.html">Kontakt</a></p>
+    </div>
+
+</body>
+</html>

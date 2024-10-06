@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich | Nader Omar</title>
+    <meta name="description" content="Erfahren Sie mehr über Nader Omar, einen leidenschaftlichen Webentwickler mit innovativen Ideen und vielseitigen Fähigkeiten.">
+    <meta name="keywords" content="Über mich, Nader Omar, Webentwicklung, Fähigkeiten, Projekte">
+    <meta name="author" content="Nader Omar">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #0a0a0a;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Overlay bleibt über dem Video */
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .bio {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .bio-section {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .bio-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .bio-section h2 {
+            font-size: 1.5em; /* Größerer Text */
+            color: #ffbf00; /* Helle, kontrastreiche Farbe für bessere Sichtbarkeit */
+            font-weight: bold; /* Fettgedruckt */
+            text-transform: uppercase; /* Text in Großbuchstaben */
+            letter-spacing: 2px; /* Abstand zwischen den Buchstaben */
+            background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund zur besseren Lesbarkeit */
+            padding: 10px 20px; /* Polsterung um den Text */
+            border-radius: 10px; /* Abgerundete Ecken */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* Schatten, um den Text hervorzuheben */
+            text-align: center; /* Text in der Mitte ausrichten */
+        }
+
+        .bio-section p {
+            font-size: 1.2em;
+            color: #dcdcdc;
+            line-height: 1.6;
+        }
+
+        .image-container {
+            flex: 1;
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-image {
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transform-style: preserve-3d;
+            animation: rotateImage 10s infinite linear;
+        }
+
+        @keyframes rotateImage {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .navigation {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .nav-item {
+            margin: 0 20px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-item:hover {
+            color: #ffbf00;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Hintergrundvideo -->
+    <video autoplay muted loop playsinline>
+        <source src="background.mp4" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
+
+    <!-- Overlay, um Text hervorzuheben -->
+    <div class="overlay"></div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <a href="index.html" class="nav-item">Startseite</a>
+        <a href="projects.html" class="nav-item">Projekte</a>
+        <a href="service.html" class="nav-item">Dienstleistungen</a>
+        <a href="about.html" class="nav-item">Über mich</a>
+        <a href="contact.html" class="nav-item">Kontakt</a>
+    </div>
+
+    <!-- Über mich Inhalt -->
+    <div class="container">
+        <div class="bio">
+            <div class="bio-section">
+                <h2>Wer ich bin</h2>
+                <p>Ich bin Nader Omar, ein begeisterter und kreativer Webentwickler mit einem Fokus auf moderne und ansprechende Weblösungen. Seitdem ich mich in die Welt des Programmierens begeben habe, ist es mein Ziel, innovative und benutzerfreundliche digitale Erlebnisse zu schaffen. In meiner Arbeit lege ich besonderen Wert darauf, die perfekte Balance zwischen Funktionalität und Ästhetik zu finden. Jede Zeile Code, die ich schreibe, spiegelt meine Leidenschaft für sauberes und effizientes Design wider. Von der Konzeption bis hin zur finalen Umsetzung gehe ich auf jedes Detail ein und sorge dafür, dass die Benutzerfreundlichkeit und das visuelle Erscheinungsbild optimal aufeinander abgestimmt sind.</p>
+            </div>
+
+            <div class="bio-section">
+                <h2>Meine Reise</h2>
+                <p>Meine Reise als Entwickler begann mit einem tiefen Interesse an Technologie und Design. Über die Jahre habe ich mein Wissen in verschiedenen Bereichen der Webentwicklung ausgebaut, darunter HTML, CSS, JavaScript, React und Backend-Entwicklung.</p>
+            </div>
+        </div>
+
+        <!-- Animiertes Bild -->
+        <div class="image-container">
+            <img src="foto.jpg" alt="Nader Omar" class="profile-image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Nader Omar. Alle Rechte vorbehalten. <a href="contact.html">Kontakt</a></p>
+    </div>
+
+</body>
+</html>

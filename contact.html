@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | Nader Omar</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Kontaktieren Sie Nader Omar für Webentwicklungsprojekte oder weitere Informationen.">
+    <meta name="keywords" content="Kontakt, Webentwicklung, Nader Omar, Projekte, Dienstleistungen">
+    <meta name="author" content="Nader Omar">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Geändert von 102% auf 100% */
+            background: rgba(0, 0, 0, 0.6); /* Overlay, um den Text besser lesbar zu machen */
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 30px; /* Reduziert für eine bessere Balance */
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 40px; /* Reduziert für eine bessere Balance */
+        }
+
+        /* Kontaktformular */
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1em;
+            outline: none;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Navigation */
+        .navigation {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .nav-item {
+            margin: 0 20px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-item:hover {
+            color: #ffbf00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hintergrundvideo -->
+    <video autoplay muted loop playsinline>
+        <source src="background.mp4" type="video/mp4">
+        Ihr Browser unterstützt das Video-Tag nicht.
+    </video>
+
+    <!-- Overlay, um Text hervorzuheben -->
+    <div class="overlay"></div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <a href="index.html" class="nav-item">Startseite</a>
+        <a href="projects.html" class="nav-item">Projekte</a>
+        <a href="service.html" class="nav-item">Dienstleistungen</a>
+        <a href="about.html" class="nav-item">Über mich</a>
+        <a href="contact.html" class="nav-item">Kontakt</a>
+    </div>
+
+    <!-- Kontaktformular -->
+    <div class="container">
+        <h1>Kontakt</h1>
+        <p>Haben Sie Fragen oder möchten Sie mit mir an einem Projekt arbeiten? Schreiben Sie mir eine Nachricht!</p>
+
+        <div class="contact-form">
+            <form action="submit_contact.php" method="POST">
+                <label for="name">Ihr Name</label>
+                <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+
+                <label for="email">Ihre E-Mail-Adresse</label>
+                <input type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" placeholder="Ihre Nachricht" required></textarea>
+
+                <button type="submit">Nachricht senden</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Nader Omar. Alle Rechte vorbehalten. <a href="contact.html">Kontakt</a></p>
+    </div>
+
+</body>
+</html>
