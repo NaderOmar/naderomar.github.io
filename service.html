@@ -35,7 +35,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Overlay, um den Text besser lesbar zu machen */
+            background: rgba(0, 0, 0, 0.6);
             z-index: 0;
         }
 
@@ -44,7 +44,7 @@
             z-index: 1;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 80px 20px; /* Anpassung des Padding-Werts oben */
             text-align: center;
         }
 
@@ -71,11 +71,16 @@
             padding: 20px;
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            width: 300px;
+            width: 30%;
             text-align: center;
             margin-bottom: 20px;
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
         }
 
         .service-card h3 {
@@ -115,7 +120,7 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 10;
             text-align: center;
-            padding: 10px;
+            padding: 10px 0;
         }
 
         .nav-item {
@@ -131,6 +136,25 @@
             color: #ffbf00;
         }
 
+        /* Media Queries für kleinere Bildschirme */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            .service-card {
+                width: 100%;
+            }
+
+            /* Vergrößerung des Abstands zum Hauptinhalt auf kleineren Bildschirmen */
+            .container {
+                padding-top: 100px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -148,7 +172,7 @@
     <div class="navigation">
         <a href="index.html" class="nav-item">Startseite</a>
         <a href="projects.html" class="nav-item">Projekte</a>
-        <a href="service.html" class="nav-item">Dienstleistungen</a>
+        <a href="services.html" class="nav-item">Dienstleistungen</a>
         <a href="about.html" class="nav-item">Über mich</a>
         <a href="contact.html" class="nav-item">Kontakt</a>
     </div>
