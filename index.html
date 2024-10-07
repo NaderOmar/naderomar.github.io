@@ -29,16 +29,6 @@
             z-index: -1;
         }
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%; /* Full height */
-            background: rgba(0, 0, 0, 0.6); /* Overlay to darken background */
-            z-index: 0;
-        }
-
         .container {
             position: relative;
             z-index: 1;
@@ -122,43 +112,43 @@
         }
 
         .navigation {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 10;
-        text-align: center;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .nav-item {
-        margin: 0 20px;
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        }   
+            margin: 0 10px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
 
         .nav-item:hover {
-        color: #ffbf00;
+            color: #ffbf00;
         }
 
-    /* Media Queries for smaller screens */
-    @media (max-width: 768px) {
-        .navigation {
-            flex-direction: column;
+        /* Overlay */
+        .overlay {
+            position: fixed; /* Change to fixed to cover the entire viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh; /* 100vh ensures it covers the entire height of the viewport */
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 0;
         }
-
-        .nav-item {
-            margin: 10px 0;
-            display: block;
-            font-size: 1.2em;
-        }
-    }
 
         /* Media Queries for smaller screens */
         @media (max-width: 768px) {
@@ -204,6 +194,7 @@
                 padding: 15px;
             }
         }
+
     </style>
 </head>
 <body>
